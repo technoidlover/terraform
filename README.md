@@ -1,170 +1,455 @@
-# Terraform 30-Day Learning Journey
-# Hành Trình Học Terraform Trong 30 Ngày
+# Terraform 30-Day Learning Course
 
-## Course Overview / Tổng Quan Khóa Học
+Complete hands-on Terraform course designed to take you from zero to production-ready infrastructure as code expert.
 
-This is a comprehensive 30-day program designed to take you from a complete beginner to a proficient Terraform user. Each day includes theory, practical examples, and hands-on labs.
+## Table of Contents
 
-Đây là chương trình 30 ngày toàn diện được thiết kế để đưa bạn từ người mới bắt đầu trở thành người dùng Terraform thành thạo. Mỗi ngày bao gồm lý thuyết, ví dụ thực tế và bài thực hành.
+1. [Course Overview](#course-overview)
+2. [Prerequisites](#prerequisites)
+3. [Course Structure](#course-structure)
+4. [Quick Start](#quick-start)
+5. [Learning Path](#learning-path)
+6. [Resources](#resources)
+7. [Troubleshooting](#troubleshooting)
 
-## Prerequisites / Yêu Cầu Tiên Quyết
+## Course Overview
 
-- Basic understanding of cloud computing concepts
-- Familiarity with command line interface
-- A computer with internet connection
-- Text editor or IDE (VS Code recommended)
+This comprehensive 30-day course covers:
 
-- Hiểu biết cơ bản về khái niệm điện toán đám mây
-- Quen thuộc với giao diện dòng lệnh
-- Máy tính có kết nối Internet
-- Trình soạn thảo văn bản hoặc IDE (khuyên nghị VS Code)
+- Core Terraform concepts and fundamentals
+- Provider configuration and management
+- Variables, outputs, and state management
+- Modules and code organization
+- Multi-cloud infrastructure (AWS, GCP, Azure)
+- Advanced features and best practices
+- Real-world project implementation
+- CI/CD integration and automation
 
-## Course Structure / Cấu Trúc Khóa Học
+Duration: 30 days (flexible, can be completed at your own pace)
+Difficulty Level: Beginner to Advanced
+Prerequisites: Basic Linux/command-line knowledge, AWS/cloud basics helpful
 
-### Week 1: Terraform Fundamentals (Days 1-7)
-### Tuần 1: Cơ Bản Về Terraform (Ngày 1-7)
+## Prerequisites
 
-- Day 1: Introduction & Installation / Giới Thiệu Và Cài Đặt
-- Day 2: Terraform Basics & HCL Syntax / Cơ Bản Terraform Và Cú Pháp HCL
-- Day 3: Providers & Provider Configuration / Providers Và Cấu Hình Provider
-- Day 4: Resources & Resource Blocks / Tài Nguyên Và Khối Tài Nguyên
-- Day 5: Terraform State Basics / Cơ Bản Về Trạng Thái Terraform
-- Day 6: Terraform Commands & Workflow / Các Lệnh Và Quy Trình Làm Việc
-- Day 7: Week 1 Review & Practice / Ôn Tập Và Thực Hành Tuần 1
+Before starting this course, ensure you have:
 
-### Week 2: Working with Resources & State (Days 8-14)
-### Tuần 2: Làm Việc Với Tài Nguyên Và Trạng Thái (Ngày 8-14)
+1. Terraform installed (version 1.0 or higher)
+   ```bash
+   terraform -v
+   ```
 
-- Day 8: Input Variables / Biến Đầu Vào
-- Day 9: Output Values / Giá Trị Đầu Ra
-- Day 10: Local Values & Data Sources / Giá Trị Cục Bộ Và Nguồn Dữ Liệu
-- Day 11: State Management Advanced / Quản Lý Trạng Thái Nâng Cao
-- Day 12: Remote State & Backends / Trạng Thái Từ Xa Và Backend
-- Day 13: Resource Dependencies / Phụ Thuộc Tài Nguyên
-- Day 14: Week 2 Review & Practice / Ôn Tập Và Thực Hành Tuần 2
+2. A cloud provider account (AWS free tier recommended):
+   - AWS Account with access key and secret key
+   - Or GCP Project with service account
+   - Or Azure subscription with credentials
 
-### Week 3: Modules & Advanced Concepts (Days 15-21)
-### Tuần 3: Modules Và Khái Niệm Nâng Cao (Ngày 15-21)
+3. Git installed for version control
+   ```bash
+   git --version
+   ```
 
-- Day 15: Introduction to Modules / Giới Thiệu Về Modules
-- Day 16: Creating Custom Modules / Tạo Module Tự Chỉnh
-- Day 17: Module Registry & Public Modules / Registry Module Và Module Công Khai
-- Day 18: Workspaces / Không Gian Làm Việc
-- Day 19: Functions & Expressions / Hàm Và Biểu Thức
-- Day 20: Conditional Expressions & Loops / Biểu Thức Điều Kiện Và Vòng Lặp
-- Day 21: Week 3 Review & Practice / Ôn Tập Và Thực Hành Tuần 3
+4. A text editor or IDE (VS Code recommended)
 
-### Week 4: Best Practices & Real-world Projects (Days 22-30)
-### Tuần 4: Thực Hành Tốt Nhất Và Dự Án Thực Tế (Ngày 22-30)
+5. Basic understanding of:
+   - Command-line/terminal usage
+   - Cloud platform concepts
+   - JSON and YAML syntax
 
-- Day 22: Terraform Best Practices / Thực Hành Tốt Nhất
-- Day 23: Security & Secrets Management / Bảo Mật Và Quản Lý Bí Mật
-- Day 24: Testing Terraform Code / Kiểm Tra Mã Terraform
-- Day 25: CI/CD with Terraform / CI/CD Với Terraform
-- Day 26: Multi-Cloud Strategies / Chiến Lược Đa Đám Mây
-- Day 27: Real-world Project Part 1 / Dự Án Thực Tế Phần 1
-- Day 28: Real-world Project Part 2 / Dự Án Thực Tế Phần 2
-- Day 29: Real-world Project Part 3 / Dự Án Thực Tế Phần 3
-- Day 30: Course Review & Next Steps / Ôn Tập Khóa Học Và Bước Tiếp Theo
+## Course Structure
 
-## How to Use This Course / Cách Sử Dụng Khóa Học Này
+The course is divided into 5 main phases:
 
-1. Follow the days in order - each builds upon previous knowledge
-2. Read the documentation in each day's folder
-3. Study the example code provided
-4. Complete the lab exercises
-5. Review and practice regularly
+### Phase 1: Foundations (Days 1-10)
+Core concepts, language features, and fundamentals
 
-1. Làm theo thứ tự các ngày - mỗi ngày xây dựng trên kiến thức trước đó
-2. Đọc tài liệu trong thư mục của mỗi ngày
-3. Nghiên cứu mã ví dụ được cung cấp
-4. Hoàn thành các bài tập thực hành
-5. Ôn tập và thực hành thường xuyên
+### Phase 2: Cloud Providers (Days 11-22)
+Deep dive into AWS, GCP, and Azure
 
-## Installation Guide / Hướng Dẫn Cài Đặt
+### Phase 3: Advanced Features (Days 23-27)
+State management, testing, CI/CD integration
 
-### Installing Terraform / Cài Đặt Terraform
+### Phase 4: Real-World Applications (Days 28-29)
+Best practices and production patterns
 
-#### Windows:
-```powershell
-# Download from official website
-# Tải xuống từ trang web chính thức
-# https://www.terraform.io/downloads
+### Phase 5: Capstone Project (Day 30)
+Comprehensive project implementation
 
-# Or use Chocolatey
-# Hoặc sử dụng Chocolatey
+## Quick Start
+
+### Initial Setup
+
+```bash
+# 1. Install Terraform (Windows)
+# Using Chocolatey:
 choco install terraform
 
-# Verify installation
-# Xác minh cài đặt
-terraform --version
+# Using manual download:
+# Download from https://www.terraform.io/downloads.html
+
+# 2. Verify installation
+terraform -v
+
+# 3. Configure AWS credentials (if using AWS)
+aws configure
+
+# 4. Navigate to course directory
+cd e:\terraform
+
+# 5. Start with Day 1
+cd day-01-terraform-basics-and-setup
 ```
 
-#### macOS:
+### Running Labs
+
+Each day includes:
+- README.md with detailed explanations
+- *.tf files with code examples
+- terraform.tfvars with sample variables
+- Lab instructions and exercises
+
+To run a lab:
+
 ```bash
-# Using Homebrew
-# Sử dụng Homebrew
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
-
-# Verify installation
-# Xác minh cài đặt
-terraform --version
+cd day-XX-topic-name
+terraform init
+terraform plan
+terraform apply
 ```
 
-#### Linux:
+To clean up:
+
 ```bash
-# Ubuntu/Debian
-wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-sudo apt update && sudo apt install terraform
-
-# Verify installation
-# Xác minh cài đặt
-terraform --version
+terraform destroy
 ```
 
-## Setting Up Your Environment / Thiết Lập Môi Trường
+## Learning Path
 
-1. Install a code editor (VS Code recommended)
-2. Install Terraform extension for your editor
-3. Set up a cloud provider account (AWS, Azure, or GCP)
-4. Configure cloud provider credentials
-5. Create a workspace folder for your labs
+### Week 1: Terraform Essentials
 
-1. Cài đặt trình soạn thảo mã (khuyên nghị VS Code)
-2. Cài đặt tiện ích mở rộng Terraform cho trình soạn thảo
-3. Thiết lập tài khoản nhà cung cấp đám mây (AWS, Azure, hoặc GCP)
-4. Cấu hình thông tin xác thực nhà cung cấp đám mây
-5. Tạo thư mục làm việc cho các bài thực hành
+- **Day 1**: Terraform Basics and Setup
+  - What is Terraform
+  - Installation and configuration
+  - Basic workflow
+  
+- **Day 2**: Provider Configuration
+  - Understanding providers
+  - Configuring AWS provider
+  - Provider versioning
+  
+- **Day 3**: Variables and Outputs
+  - Input variables
+  - Output values
+  - Type constraints
+  
+- **Day 4**: Data Sources and Locals
+  - Data sources
+  - Local values
+  - Dynamic data retrieval
+  
+- **Day 5**: Resource Creation
+  - Basic resource syntax
+  - Dependencies
+  - Resource references
+  
+- **Day 6**: State Management
+  - Terraform state file
+  - Remote state
+  - State locking
+  
+- **Day 7**: Modules Introduction
+  - Module structure
+  - Creating modules
+  - Module variables
 
-## Additional Resources / Tài Nguyên Bổ Sung
+### Week 2: AWS Deep Dive
 
-- Official Terraform Documentation: https://www.terraform.io/docs
-- Terraform Registry: https://registry.terraform.io
-- HashiCorp Learn: https://learn.hashicorp.com/terraform
-- Community Forums: https://discuss.hashicorp.com
+- **Day 8**: Modules Advanced
+  - Module composition
+  - Registry modules
+  - Module best practices
+  
+- **Day 9**: Expressions and Functions
+  - String interpolation
+  - Built-in functions
+  - Expressions
+  
+- **Day 10**: Conditionals and Loops
+  - For expressions
+  - For each
+  - Conditional logic
+  
+- **Day 11**: AWS EC2 Basic
+  - EC2 instances
+  - Key pairs
+  - Security groups
+  
+- **Day 12**: AWS Networking
+  - VPCs
+  - Subnets
+  - Route tables
+  - NAT gateways
+  
+- **Day 13**: AWS RDS
+  - Database instances
+  - Parameter groups
+  - Multi-AZ setup
+  
+- **Day 14**: AWS S3
+  - Buckets and objects
+  - Bucket policies
+  - Static website hosting
 
-## Support / Hỗ Trợ
+### Week 3: Multi-Cloud & Advanced
 
-Each day's folder contains:
-- README.md with detailed explanations (bilingual)
-- Example Terraform files with comprehensive comments
-- Lab exercises with solutions
-- Additional resources and tips
+- **Day 15**: AWS IAM
+  - Users and roles
+  - Policies and permissions
+  - Service accounts
+  
+- **Day 16-18**: AWS Project (3-Part)
+  - Complete application infrastructure
+  - Web tier with load balancing
+  - Database tier with RDS
+  - Security and networking
+  
+- **Day 19**: GCP Basics
+  - GCP provider setup
+  - Projects and APIs
+  - Service accounts
+  
+- **Day 20**: GCP Compute and Storage
+  - Compute Engine
+  - Storage buckets
+  - Cloud SQL
+  
+- **Day 21**: Azure Basics
+  - Azure provider setup
+  - Resource groups
+  - Subscriptions
+  
+- **Day 22**: Azure Resources
+  - VMs and storage
+  - Networking
+  - Managed databases
 
-Thư mục của mỗi ngày chứa:
-- README.md với giải thích chi tiết (song ngữ)
-- Các tập tin Terraform mẫu với ghi chú đầy đủ
-- Bài tập thực hành với các lời giải
-- Tài nguyên bổ sung và các mẹo hay
+### Week 4: Enterprise Features & Project
 
-## License / Giấy Phép
+- **Day 23**: Terraform Cloud and State
+  - Remote state backends
+  - Terraform Cloud organization
+  - State sharing
+  
+- **Day 24**: Testing and Validation
+  - Terraform validate
+  - Terraform fmt
+  - Terraform plan analysis
+  
+- **Day 25**: Workspaces and Environments
+  - Workspace management
+  - Environment separation
+  - Environment-specific configs
+  
+- **Day 26**: CI/CD Integration
+  - GitHub Actions
+  - GitLab CI
+  - Pipeline automation
+  
+- **Day 27**: Troubleshooting and Debugging
+  - Common errors
+  - Debugging techniques
+  - Log analysis
+  
+- **Day 28**: Best Practices
+  - Code organization
+  - Naming conventions
+  - Security practices
+  
+- **Day 29**: Real-World Scenarios
+  - Multi-region deployment
+  - Disaster recovery
+  - Cost optimization
+  
+- **Day 30**: Capstone Project
+  - Complete infrastructure project
+  - All concepts combined
+  - Production-ready code
 
-This educational material is provided for learning purposes.
-Tài liệu giáo dục này được cung cấp cho mục đích học tập.
+## Resources
+
+### Official Documentation
+- [Terraform Official Docs](https://www.terraform.io/docs)
+- [AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [GCP Provider Documentation](https://registry.terraform.io/providers/hashicorp/google/latest/docs)
+- [Azure Provider Documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+
+### Terraform Registry
+- [Public Module Registry](https://registry.terraform.io/modules)
+- [Community Providers](https://registry.terraform.io/browse/providers)
+
+### Additional Resources
+- [Terraform CLI Documentation](https://www.terraform.io/cli)
+- [HashiCorp Learn](https://learn.hashicorp.com/terraform)
+- [Terraform Changelog](https://github.com/hashicorp/terraform/releases)
+
+### Cloud Documentation
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [GCP Documentation](https://cloud.google.com/docs)
+- [Azure Documentation](https://docs.microsoft.com/en-us/azure/)
+
+### Tools and Extensions
+
+VS Code Extensions recommended:
+- Terraform (by HashiCorp)
+- AWS Toolkit
+- Azure Tools
+
+## Directory Structure
+
+```
+terraform/
+├── README.md (this file)
+├── day-01-terraform-basics-and-setup/
+│   ├── README.md
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   ├── terraform.tfvars
+│   └── lab-exercises.md
+├── day-02-provider-configuration/
+│   └── ... (similar structure)
+├── ... (days 3-30)
+└── resources/
+    ├── templates/
+    │   └── (reusable Terraform templates)
+    └── scripts/
+        └── (utility scripts)
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Terraform command not found**
+   - Add Terraform to PATH
+   - Verify installation: `terraform -v`
+
+2. **Provider credentials not working**
+   - Check AWS credentials: `aws configure`
+   - Verify environment variables
+   - Check IAM permissions
+
+3. **State lock error**
+   - Clear remote state lock if needed
+   - Check for concurrent operations
+
+4. **Permission denied errors**
+   - Verify IAM roles and policies
+   - Check security group rules
+   - Verify bucket policies
+
+5. **Module not found**
+   - Run `terraform init`
+   - Check module source path
+   - Verify registry connectivity
+
+### Getting Help
+
+If you encounter issues:
+
+1. Check the day's README.md file
+2. Review Terraform documentation
+3. Check cloud provider documentation
+4. Examine terraform.log file:
+   ```bash
+   TF_LOG=DEBUG terraform plan
+   ```
+
+5. Search Terraform GitHub issues
+
+## Study Tips
+
+1. Follow the course sequentially
+2. Complete all exercises for each day
+3. Take notes while studying
+4. Practice regularly, don't skip days
+5. Review previous days before moving forward
+6. Use the same cloud account throughout course
+7. Keep terraform files organized
+8. Use version control (git) for all code
+9. Read error messages carefully
+10. Experiment and modify examples
+
+## Certificate of Completion
+
+After completing all 30 days and the capstone project, you will have:
+
+- Deep understanding of Terraform ecosystem
+- Hands-on experience with multiple cloud providers
+- Production-ready infrastructure code
+- Knowledge of best practices and patterns
+- Ability to design and implement complex infrastructure
+- Understanding of advanced features and optimizations
+
+## Course Maintenance
+
+This course is regularly updated with:
+- Latest Terraform versions
+- New provider features
+- Updated best practices
+- New examples and scenarios
+
+Last Updated: February 2026
+Terraform Version: 1.0+
 
 ---
 
-Start your journey with Day 1!
-Bắt đầu hành trình của bạn với Ngày 1!
+## Quick Command Reference
+
+```bash
+# Initialize working directory
+terraform init
+
+# Validate configuration
+terraform validate
+
+# Format Terraform files
+terraform fmt -recursive
+
+# Create execution plan
+terraform plan
+
+# Apply changes
+terraform apply
+
+# Destroy resources
+terraform destroy
+
+# Show current state
+terraform show
+
+# List resources in state
+terraform state list
+
+# Output values
+terraform output
+
+# Workspace management
+terraform workspace list
+terraform workspace new [workspace]
+terraform workspace select [workspace]
+
+# Advanced debugging
+TF_LOG=DEBUG terraform plan
+TF_LOG_PATH=terraform.log terraform apply
+```
+
+## Next Steps
+
+1. Install Terraform if not already done
+2. Configure your cloud provider credentials
+3. Start with [Day 1: Terraform Basics and Setup](day-01-terraform-basics-and-setup/README.md)
+4. Follow the learning path sequentially
+5. Complete all exercises
+6. Build the capstone project
+
+Good luck with your Terraform learning journey!
