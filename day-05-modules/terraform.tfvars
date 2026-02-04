@@ -1,0 +1,11 @@
+aws_region             = "us-east-1"
+environment            = "development"
+project_name           = "day5-project"
+vpc_primary_cidr       = "10.0.0.0/16"
+vpc_secondary_cidr     = "10.1.0.0/16"
+subnet_cidrs_primary   = ["10.0.1.0/24", "10.0.2.0/24"]
+subnet_cidrs_secondary = ["10.1.1.0/24", "10.1.2.0/24"]
+allowed_cidr           = "0.0.0.0/0"
+enable_web_servers     = true
+web_server_count       = 2
+instance_type          = "t3.micro"
