@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -18,7 +18,7 @@ variable "environment" {
   description = "Environment name (dev, staging, prod)"
   type        = string
   default     = "dev"
-  
+
   validation {
     condition     = contains(["dev", "staging", "prod"], var.environment)
     error_message = "Environment must be dev, staging, or prod"
@@ -31,7 +31,7 @@ variable "instance_count" {
   description = "Number of instances to create"
   type        = number
   default     = 1
-  
+
   validation {
     condition     = var.instance_count > 0 && var.instance_count <= 10
     error_message = "Instance count must be between 1 and 10"

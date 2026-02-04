@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -45,7 +45,7 @@ resource "local_file" "first" {
 resource "local_file" "second" {
   filename = "${path.module}/second.txt"
   content  = "This is created second"
-  
+
   # Explicit dependency using depends_on
   # Phu thuoc ro rang su dung depends_on
   depends_on = [local_file.first]
@@ -70,7 +70,7 @@ resource "local_file" "summary" {
   filename = "${path.module}/summary.txt"
   # Depends on both random_integer and local_file.config
   # Phu thuoc vao ca random_integer va local_file.config
-  content  = <<-EOT
+  content = <<-EOT
     Configuration Summary
     Tom tat Cau hinh
     ===================
@@ -83,7 +83,7 @@ resource "local_file" "summary" {
     - random_integer.priority
     - local_file.config
   EOT
-  
+
   depends_on = [local_file.config]
 }
 
@@ -103,7 +103,7 @@ resource "local_file" "dep2" {
 resource "local_file" "multi_dep" {
   filename = "${path.module}/multi-dependency.txt"
   content  = "This depends on multiple resources"
-  
+
   # Multiple explicit dependencies
   # Nhieu phu thuoc ro rang
   depends_on = [

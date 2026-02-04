@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -25,7 +25,7 @@ resource "local_file" "multiple_files" {
   # Create 3 files
   # Tao 3 files
   count = 3
-  
+
   filename = "${path.module}/file-${count.index}.txt"
   content  = "This is file number ${count.index}\nDay la file so ${count.index}"
 }
@@ -36,7 +36,7 @@ resource "local_file" "named_files" {
   # Create files for each environment
   # Tao files cho moi moi truong
   for_each = toset(["dev", "staging", "prod"])
-  
+
   filename = "${path.module}/${each.key}-config.txt"
   content  = "Configuration for ${each.key} environment\nCau hinh cho moi truong ${each.key}"
 }
@@ -46,7 +46,7 @@ resource "local_file" "named_files" {
 resource "local_file" "dependency_example" {
   filename = "${path.module}/dependent-file.txt"
   content  = "This file depends on basic file"
-  
+
   # Explicit dependency
   # Phu thuoc ro rang
   depends_on = [local_file.basic]
@@ -57,18 +57,18 @@ resource "local_file" "dependency_example" {
 resource "local_file" "lifecycle_example" {
   filename = "${path.module}/lifecycle-file.txt"
   content  = "This file has lifecycle rules\nFile nay co cac quy tac lifecycle"
-  
+
   # Lifecycle configuration
   # Cau hinh lifecycle
   lifecycle {
     # Prevent accidental deletion
     # Ngan chan xoa nham
     prevent_destroy = false
-    
+
     # Create new resource before destroying old
     # Tao resource moi truoc khi huy cu
     create_before_destroy = true
-    
+
     # Ignore changes to specific attributes
     # Bo qua thay doi doi voi thuoc tinh cu the
     ignore_changes = [

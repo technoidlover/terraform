@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -39,18 +39,18 @@ locals {
     ManagedBy   = "Terraform"
     CreatedDate = timestamp()
   }
-  
+
   # Computed naming convention
   # Quy uoc dat ten duoc tinh toan
   resource_prefix = "${var.environment}-${var.application}"
-  
+
   # Complex transformation
   # Bien doi phuc tap
   tag_string = join(",", [for k, v in local.common_tags : "${k}=${v}"])
-  
+
   # Conditional logic
   # Logic co dieu kien
-  is_production = var.environment == "production"
+  is_production  = var.environment == "production"
   instance_count = local.is_production ? 3 : 1
 }
 
@@ -80,7 +80,7 @@ resource "local_file" "source_file" {
 # Data source de doc file chung ta da tao
 data "local_file" "read_source" {
   filename = local_file.source_file.filename
-  
+
   depends_on = [local_file.source_file]
 }
 
@@ -89,12 +89,12 @@ data "local_file" "read_source" {
 resource "local_file" "locals_demo" {
   filename = "${path.module}/${local.resource_prefix}-config.json"
   content = jsonencode({
-    name         = random_pet.server.id
-    prefix       = local.resource_prefix
-    tags         = local.common_tags
-    is_prod      = local.is_production
-    count        = local.instance_count
-    tag_string   = local.tag_string
+    name       = random_pet.server.id
+    prefix     = local.resource_prefix
+    tags       = local.common_tags
+    is_prod    = local.is_production
+    count      = local.instance_count
+    tag_string = local.tag_string
   })
 }
 

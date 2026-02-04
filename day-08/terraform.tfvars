@@ -4,8 +4,8 @@
 # Override default values
 # Ghi de cac gia tri mac dinh
 
-environment     = "staging"
-instance_count  = 3
+environment       = "staging"
+instance_count    = 3
 enable_monitoring = true
 
 availability_zones = [
