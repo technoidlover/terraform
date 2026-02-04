@@ -5,15 +5,15 @@ instance_type    = "t3.micro"
 
 bucket_config = {
   production = {
-    environment         = "prod"
-    enable_versioning   = true
+    environment       = "prod"
+    enable_versioning = true
   }
   staging = {
-    environment         = "stage"
-    enable_versioning   = true
+    environment       = "stage"
+    enable_versioning = true
   }
   development = {
-    environment         = "dev"
-    enable_versioning   = false
+    environment       = "dev"
+    enable_versioning = false
   }
 }

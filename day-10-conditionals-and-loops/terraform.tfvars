@@ -1,10 +1,10 @@
-aws_region    = "us-east-1"
-environment   = "development"
-project_name  = "day10-project"
-create_vpc    = true
-enable_igw    = true
-vpc_cidr      = "10.0.0.0/16"
-restrict_egress = false
+aws_region       = "us-east-1"
+environment      = "development"
+project_name     = "day10-project"
+create_vpc       = true
+enable_igw       = true
+vpc_cidr         = "10.0.0.0/16"
+restrict_egress  = false
 create_instances = true
 
 subnets = {
