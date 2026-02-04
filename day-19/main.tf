@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -36,11 +36,11 @@ locals {
   original_name = "my-application"
   upper_name    = upper(local.original_name)
   title_name    = title(replace(local.original_name, "-", " "))
-  
+
   # String formatting
   # Định dạng chuỗi
   formatted = format("Server-%03d", 42)
-  
+
   # String splitting and joining
   # Chia và nối chuỗi
   parts  = split("-", local.original_name)
@@ -52,15 +52,15 @@ locals {
 locals {
   # Length and contains
   # Độ dài và chứa
-  env_count     = length(var.environments)
-  has_prod      = contains(var.environments, "prod")
-  
+  env_count = length(var.environments)
+  has_prod  = contains(var.environments, "prod")
+
   # List operations
   # Thao tác danh sách
-  first_env     = var.environments[0]
-  last_env      = var.environments[length(var.environments) - 1]
-  sorted_envs   = sort(var.environments)
-  
+  first_env   = var.environments[0]
+  last_env    = var.environments[length(var.environments) - 1]
+  sorted_envs = sort(var.environments)
+
   # Map operations
   # Thao tác map
   tag_names     = [for tag in var.tags_list : tag.name]
@@ -71,12 +71,12 @@ locals {
 # Ví Dụ Hàm Số
 locals {
   numbers = [5, 10, 15, 20, 25]
-  
+
   # Get minimum and maximum values from list
   # Lấy giá trị nhỏ nhất và lớn nhất từ danh sách
   min_value = min(local.numbers...)
   max_value = max(local.numbers...)
-  
+
   # Calculations
   # Tính toán
   result = ceil(10.3)
@@ -124,7 +124,7 @@ resource "local_file" "functions_demo" {
     Formatted: ${local.formatted_time}
     
     ENCODING FUNCTIONS / HAM MA HOA:
-    JSON: ${jsonencode({name = "example", value = 123})}
+    JSON: ${jsonencode({ name = "example", value = 123 })}
     Base64: ${base64encode("Hello Terraform")}
   EOT
 }

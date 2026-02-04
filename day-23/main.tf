@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -37,7 +37,7 @@ locals {
   # Khong bao gio luu thong tin nhay cam o day
   # Use environment variables or secret management instead
   # Su dung bien moi truong hoac quan ly bi mat thay the
-  
+
   database_config = {
     host     = "db.example.com"
     port     = 5432
@@ -67,7 +67,7 @@ resource "local_file" "config" {
     Note: Passwords should be managed separately
     Luu y: Passwords nen duoc quan ly rieng biet
   EOT
-  
+
   # Prevent accidental commits
   # Ngan chan commit nham
   file_permission = "0600"
@@ -100,25 +100,25 @@ locals {
   # Cac muc bao mat khac nhau tuy theo moi truong
   environment_config = {
     development = {
-      require_mfa     = false
-      encryption      = "optional"
-      access_logging  = false
-      public_access   = true
+      require_mfa    = false
+      encryption     = "optional"
+      access_logging = false
+      public_access  = true
     }
     staging = {
-      require_mfa     = true
-      encryption      = "required"
-      access_logging  = true
-      public_access   = false
+      require_mfa    = true
+      encryption     = "required"
+      access_logging = true
+      public_access  = false
     }
     production = {
-      require_mfa     = true
-      encryption      = "required"
-      access_logging  = true
-      public_access   = false
+      require_mfa    = true
+      encryption     = "required"
+      access_logging = true
+      public_access  = false
     }
   }
-  
+
   current_environment_config = local.environment_config[var.environment]
 }
 

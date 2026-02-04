@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -16,7 +16,7 @@ terraform {
 # Goi module may chu web cho moi truong development
 module "dev_server" {
   source = "./modules/web-server"
-  
+
   server_name   = "dev-web-server"
   port          = 8080
   environment   = "dev"
@@ -27,7 +27,7 @@ module "dev_server" {
 # Goi module may chu web cho moi truong production
 module "prod_server" {
   source = "./modules/web-server"
-  
+
   server_name   = "prod-web-server"
   port          = 80
   environment   = "prod"

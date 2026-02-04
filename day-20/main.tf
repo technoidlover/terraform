@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -56,19 +56,19 @@ locals {
   # Ternary conditional
   # Dieu kien ternary
   instance_type = var.environment == "production" ? "t3.large" : "t3.micro"
-  
+
   # Conditional with boolean
   # Dieu kien voi boolean
   monitoring_config = var.enable_monitoring ? "enabled" : "disabled"
-  
+
   # For expression - transform list
   # Bieu thuc for - bien doi list
   uppercase_names = [for name in var.server_names : upper(name)]
-  
+
   # For expression with conditional - filter list
   # Bieu thuc for voi dieu kien - loc list
   large_servers = [for k, v in var.server_configs : k if v.size == "large" || v.size == "xlarge"]
-  
+
   # For expression - create map from list
   # Bieu thuc for - tao map tu list
   server_urls = {
@@ -83,7 +83,7 @@ resource "local_file" "count_example" {
   # Create 3 files using count
   # Tao 3 files su dung count
   count = 3
-  
+
   filename = "${path.module}/count-file-${count.index}.txt"
   content  = <<-EOT
     File created with count
@@ -103,7 +103,7 @@ resource "local_file" "foreach_set" {
   # Create a file for each server name
   # Tao file cho moi ten server
   for_each = toset(var.server_names)
-  
+
   filename = "${path.module}/server-${each.key}.txt"
   content  = <<-EOT
     Server: ${each.key}
@@ -122,7 +122,7 @@ resource "local_file" "foreach_map" {
   # Create a file for each server configuration
   # Tao file cho moi cau hinh server
   for_each = var.server_configs
-  
+
   filename = "${path.module}/config-${each.key}.txt"
   content  = <<-EOT
     Server Configuration
@@ -146,7 +146,7 @@ resource "local_file" "conditional" {
   # Only create if monitoring is enabled
   # Chi tao neu monitoring duoc bat
   count = var.enable_monitoring ? 1 : 0
-  
+
   filename = "${path.module}/monitoring-config.txt"
   content  = <<-EOT
     Monitoring Enabled

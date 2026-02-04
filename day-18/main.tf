@@ -3,7 +3,7 @@
 
 terraform {
   required_version = ">= 1.0"
-  
+
   required_providers {
     local = {
       source  = "hashicorp/local"
@@ -35,7 +35,7 @@ locals {
       instance_size  = "large"
     }
   }
-  
+
   # Get configuration for current workspace
   # Lay cau hinh cho workspace hien tai
   current_config = local.workspace_configs[terraform.workspace]
