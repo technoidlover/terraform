@@ -41,9 +41,9 @@ resource "aws_security_group" "hello_world" {
   # Egress (outbound) rule: Allow all outbound traffic
   # This rule permits any traffic leaving the security group
   egress {
-    from_port   = 0           # All ports
-    to_port     = 0           # All ports
-    protocol    = "-1"        # All protocols (-1 means all)
+    from_port   = 0             # All ports
+    to_port     = 0             # All ports
+    protocol    = "-1"          # All protocols (-1 means all)
     cidr_blocks = ["0.0.0.0/0"] # To anywhere
     description = "Allow all outbound traffic"
   }
@@ -52,9 +52,9 @@ resource "aws_security_group" "hello_world" {
   # This rule allows SSH connections from your IP address
   # WARNING: In production, restrict this to your specific IP instead of 0.0.0.0/0
   ingress {
-    from_port   = 22         # SSH port
-    to_port     = 22         # SSH port
-    protocol    = "tcp"      # TCP protocol
+    from_port   = 22            # SSH port
+    to_port     = 22            # SSH port
+    protocol    = "tcp"         # TCP protocol
     cidr_blocks = ["0.0.0.0/0"] # From anywhere (not recommended for production)
     description = "Allow SSH from anywhere"
   }
@@ -62,9 +62,9 @@ resource "aws_security_group" "hello_world" {
   # Ingress rule: Allow HTTP access
   # This rule allows HTTP web traffic
   ingress {
-    from_port   = 80        # HTTP port
-    to_port     = 80        # HTTP port
-    protocol    = "tcp"     # TCP protocol
+    from_port   = 80            # HTTP port
+    to_port     = 80            # HTTP port
+    protocol    = "tcp"         # TCP protocol
     cidr_blocks = ["0.0.0.0/0"] # From anywhere
     description = "Allow HTTP from anywhere"
   }
@@ -72,9 +72,9 @@ resource "aws_security_group" "hello_world" {
   # Ingress rule: Allow HTTPS access
   # This rule allows HTTPS/SSL web traffic
   ingress {
-    from_port   = 443       # HTTPS port
-    to_port     = 443       # HTTPS port
-    protocol    = "tcp"     # TCP protocol
+    from_port   = 443           # HTTPS port
+    to_port     = 443           # HTTPS port
+    protocol    = "tcp"         # TCP protocol
     cidr_blocks = ["0.0.0.0/0"] # From anywhere
     description = "Allow HTTPS from anywhere"
   }
@@ -133,8 +133,8 @@ resource "aws_instance" "hello_world" {
 
   # Root volume configuration
   root_block_device {
-    volume_type = "gp2"        # General purpose SSD
-    volume_size = 20           # Size in GB (free tier allows up to 30GB)
+    volume_type           = "gp2" # General purpose SSD
+    volume_size           = 20    # Size in GB (free tier allows up to 30GB)
     delete_on_termination = true  # Delete volume when instance is deleted
   }
 
@@ -160,7 +160,7 @@ resource "aws_instance" "hello_world" {
 
   # Add a comment for future reference
   lifecycle {
-    ignore_changes = [ami]  # Ignore changes to AMI if it's been manually changed
+    ignore_changes = [ami] # Ignore changes to AMI if it's been manually changed
   }
 }
 
