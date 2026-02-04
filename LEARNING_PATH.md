@@ -1,19 +1,19 @@
 # Terraform 30-Day Course - Learning Path
-# Khoa hoc Terraform 30 ngay - Duong dan Hoc tap
+# Khóa Học Terraform 30 Ngày - Đường Dẫn Học Tập
 
-## Course Map / Ban do Khoa hoc
+## Course Map / Bản Đồ Khóa Học
 
 This document outlines the complete learning path for the
 30-day Terraform course.
 
-Tai lieu nay tro lai duong dan hoc tap day du cho
-khoa hoc Terraform 30 ngay.
+Tài liệu này trình bày đường dẫn học tập đầy đủ cho
+khóa học Terraform 30 ngày.
 
-## Week 1: Fundamentals / Tuan 1: Co ban
+## Week 1: Fundamentals / Tuần 1: Cơ Bản
 
 Essential foundation for all Terraform work.
 
-Nen tang can thiet cho tat ca cong viec Terraform.
+Nền tảng cần thiết cho tất cả công việc Terraform.
 
 ### Day 1: Introduction and Installation
 - What is Terraform
@@ -77,11 +77,11 @@ Nen tang can thiet cho tat ca cong viec Terraform.
 
 **Outputs**: Complete understanding of fundamentals
 
-## Week 2: Working with State and Resources / Tuan 2: Lam viec voi Trang thai va Tai nguyen
+## Week 2: Working with State and Resources / Tuần 2: Làm Việc Với Trạng Thái Và Tài Nguyên
 
 Advanced concepts for managing infrastructure.
 
-Khai niem nang cao cho quan ly ha tang.
+Khái niệm nâng cao cho quản lý hạ tầng.
 
 ### Day 8: Input Variables
 - Variable declaration

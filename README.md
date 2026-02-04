@@ -81,34 +81,34 @@ This is a comprehensive 30-day program designed to take you from a complete begi
 4. Hoàn thành các bài tập thực hành
 5. Ôn tập và thực hành thường xuyên
 
-## Installation Guide / Huong dan Cai dat
+## Installation Guide / Hướng Dẫn Cài Đặt
 
-### Installing Terraform / Cai dat Terraform
+### Installing Terraform / Cài Đặt Terraform
 
 #### Windows:
 ```powershell
 # Download from official website
-# Tai xuong tu trang web chinh thuc
+# Tải xuống từ trang web chính thức
 # https://www.terraform.io/downloads
 
 # Or use Chocolatey
-# Hoac su dung Chocolatey
+# Hoặc sử dụng Chocolatey
 choco install terraform
 
 # Verify installation
-# Xac minh cai dat
+# Xác minh cài đặt
 terraform --version
 ```
 
 #### macOS:
 ```bash
 # Using Homebrew
-# Su dung Homebrew
+# Sử dụng Homebrew
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 
 # Verify installation
-# Xac minh cai dat
+# Xác minh cài đặt
 terraform --version
 ```
 
@@ -120,11 +120,11 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install terraform
 
 # Verify installation
-# Xac minh cai dat
+# Xác minh cài đặt
 terraform --version
 ```
 
-## Setting Up Your Environment / Thiet lap Moi truong
+## Setting Up Your Environment / Thiết Lập Môi Trường
 
 1. Install a code editor (VS Code recommended)
 2. Install Terraform extension for your editor
@@ -132,20 +132,20 @@ terraform --version
 4. Configure cloud provider credentials
 5. Create a workspace folder for your labs
 
-1. Cai dat trinh soan thao ma (khuyen nghi VS Code)
-2. Cai dat extension Terraform cho trinh soan thao
-3. Thiet lap tai khoan nha cung cap dam may (AWS, Azure, hoac GCP)
-4. Cau hinh thong tin xac thuc nha cung cap dam may
-5. Tao folder lam viec cho cac bai thuc hanh
+1. Cài đặt trình soạn thảo mã (khuyên nghị VS Code)
+2. Cài đặt tiện ích mở rộng Terraform cho trình soạn thảo
+3. Thiết lập tài khoản nhà cung cấp đám mây (AWS, Azure, hoặc GCP)
+4. Cấu hình thông tin xác thực nhà cung cấp đám mây
+5. Tạo thư mục làm việc cho các bài thực hành
 
-## Additional Resources / Tai nguyen Bo sung
+## Additional Resources / Tài Nguyên Bổ Sung
 
 - Official Terraform Documentation: https://www.terraform.io/docs
 - Terraform Registry: https://registry.terraform.io
 - HashiCorp Learn: https://learn.hashicorp.com/terraform
 - Community Forums: https://discuss.hashicorp.com
 
-## Support / Ho tro
+## Support / Hỗ Trợ
 
 Each day's folder contains:
 - README.md with detailed explanations (bilingual)
@@ -153,18 +153,18 @@ Each day's folder contains:
 - Lab exercises with solutions
 - Additional resources and tips
 
-Folder cua moi ngay chua:
-- README.md voi giai thich chi tiet (song ngu)
-- Cac file Terraform mau voi comment day du
-- Bai tap thuc hanh voi loi giai
-- Tai nguyen bo sung va meo hay
+Thư mục của mỗi ngày chứa:
+- README.md với giải thích chi tiết (song ngữ)
+- Các tập tin Terraform mẫu với ghi chú đầy đủ
+- Bài tập thực hành với các lời giải
+- Tài nguyên bổ sung và các mẹo hay
 
-## License / Giay phep
+## License / Giấy Phép
 
 This educational material is provided for learning purposes.
-Tai lieu giao duc nay duoc cung cap cho muc dich hoc tap.
+Tài liệu giáo dục này được cung cấp cho mục đích học tập.
 
 ---
 
 Start your journey with Day 1!
-Bat dau hanh trinh cua ban voi Ngay 1!
+Bắt đầu hành trình của bạn với Ngày 1!

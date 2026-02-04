@@ -83,29 +83,29 @@ locals {
 }
 
 # Date/Time Functions Examples
-# Vi du Ham Ngay/Gio
+# Ví Dụ Hàm Ngày/Giờ
 locals {
   current_time   = timestamp()
   formatted_time = formatdate("YYYY-MM-DD hh:mm:ss", timestamp())
 }
 
 # Create file demonstrating all functions
-# Tao file minh hoa tat ca cac ham
+# Tạo tập tin minh họa tất cả các hàm
 resource "local_file" "functions_demo" {
   filename = "${path.module}/functions-demo.txt"
   content  = <<-EOT
     Terraform Functions Demonstration
-    Minh hoa Ham Terraform
+    Minh Họa Hàm Terraform
     =====================================
     
-    STRING FUNCTIONS / HAM CHUOI:
+    STRING FUNCTIONS / HÀM CHUỖI:
     Original: ${local.original_name}
     Uppercase: ${local.upper_name}
     Title Case: ${local.title_name}
     Formatted: ${local.formatted}
     Joined: ${local.joined}
     
-    COLLECTION FUNCTIONS / HAM THU TAP:
+    COLLECTION FUNCTIONS / HÀM THU TẬP:
     Environment Count: ${local.env_count}
     Has Production: ${local.has_prod}
     First Environment: ${local.first_env}
@@ -113,24 +113,24 @@ resource "local_file" "functions_demo" {
     Sorted: ${join(", ", local.sorted_envs)}
     Tag Names: ${join(", ", local.tag_names)}
     
-    NUMERIC FUNCTIONS / HAM SO:
+    NUMERIC FUNCTIONS / HÀM SỐ:
     Numbers: ${join(", ", [for n in local.numbers : tostring(n)])}
     Minimum: ${local.min_value}
     Maximum: ${local.max_value}
     Ceil(10.3): ${local.result}
     
-    DATE/TIME FUNCTIONS / HAM NGAY/GIO:
+    DATE/TIME FUNCTIONS / HÀM NGÀY/GIỜ:
     Timestamp: ${local.current_time}
     Formatted: ${local.formatted_time}
     
-    ENCODING FUNCTIONS / HAM MA HOA:
+    ENCODING FUNCTIONS / HÀM MÃ HÓA:
     JSON: ${jsonencode({ name = "example", value = 123 })}
     Base64: ${base64encode("Hello Terraform")}
   EOT
 }
 
 # Output demonstrating function results
-# Output minh hoa ket qua ham
+# Đầu ra minh họa kết quả hàm
 output "string_functions" {
   value = {
     upper     = local.upper_name

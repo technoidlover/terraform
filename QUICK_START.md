@@ -1,9 +1,9 @@
 # Terraform 30-Day Course - Quick Start Guide
-# Khoa hoc Terraform 30 ngay - Huong dan Bat dau Nhanh chong
+# Khóa Học Terraform 30 Ngày - Hướng Dẫn Bắt Đầu Nhanh Chóng
 
-## Getting Started / Bat dau
+## Getting Started / Bắt Đầu
 
-### 1. Prerequisites / Tien quyet
+### 1. Prerequisites / Tiên Quyết
 
 - Terraform installed (version 1.0+)
 - AWS account (or another cloud provider)
@@ -11,12 +11,12 @@
 - Git for version control
 - Basic command line knowledge
 
-### 2. Directory Structure / Cau truc Thu muc
+### 2. Directory Structure / Cấu Trúc Thư Mục
 
 ```
 e:\terraform\
-├── README.md                    # Main overview / Tong quan chinh
-├── QUICK_START.md              # This file / File nay
+├── README.md                    # Main overview / Tổng Quan Chính
+├── QUICK_START.md              # This file / Tập Tin Này
 ├── day-01/                      # Day 1 materials
 │   ├── README.md
 │   └── example.tf
@@ -25,46 +25,46 @@ e:\terraform\
 │   ├── main.tf
 │   └── lab-2.1-first-config/
 ├── ... (days 3-30)
-└── LEARNING_PATH.md            # Learning path / Duong dan hoc tap
+└── LEARNING_PATH.md            # Learning path / Đường Dẫn Học Tập
 ```
 
-### 3. How to Use Each Day / Cach su dung Moi ngay
+### 3. How to Use Each Day / Cách Sử Dụng Mỗi Ngày
 
 1. **Read the README.md**
    - Contains theory and concepts
-   - Chu chua ly thuyet va khai niem
+   - Chứa lý thuyết và khái niệm
 
 2. **Study the Code**
    - Review example.tf or main.tf
-   - Code duoc comment day du
+   - Mã được ghi chú đầy đủ
    - All comments in bilingual format
-   - Cac chu thich song ngu
+   - Các ghi chú song ngữ
 
 3. **Complete Lab Exercises**
    - Follow step-by-step instructions
-   - Lam theo huong dan chi tiet
+   - Làm theo hướng dẫn chi tiết
    - Practice commands
-   - Thuc hanh cac lenh
+   - Thực hành các lệnh
 
 4. **Review Outputs**
    - Understand results
    - Compare with expectations
-   - Xem xet ket qua
+   - Xem xét kết quả
 
-### 4. Learning Tips / Meo Hoc tap
+### 4. Learning Tips / Mẹo Học Tập
 
 - Don't just read, practice hands-on
-- Khong chi doc, thuc hanh tay
+- Không chỉ đọc, thực hành tay
 - Type commands yourself
-- Tu nhap cac lenh
+- Tự nhập các lệnh
 - Experiment with examples
-- Thuc nghiem voi cac vi du
+- Thử nghiệm với các ví dụ
 - Take notes
-- Ghi chu quan trong
+- Ghi chú quan trọng
 - Ask questions
-- Dat cau hoi
+- Đặt câu hỏi
 
-### 5. Daily Schedule / Lich trinh Hang ngay
+### 5. Daily Schedule / Lịch Trình Hàng Ngày
 
 - **1-2 hours per day** recommended
 - Read README: 20-30 minutes
@@ -72,7 +72,7 @@ e:\terraform\
 - Practice labs: 20-40 minutes
 - Review: 10 minutes
 
-### 6. Week-by-Week Progression / Tien trinh Tung tuan
+### 6. Week-by-Week Progression / Tiến Trình Từng Tuần
 
 **Week 1: Basics** (Days 1-7)
 - Foundation knowledge
@@ -94,11 +94,11 @@ e:\terraform\
 - Real-world projects
 - Team collaboration
 
-### 7. Common Commands / Cac lenh Thuong gap
+### 7. Common Commands / Các Lệnh Thường Gặp
 
 ```bash
 # Before working with a day's code
-# Truoc khi lam viec voi ma cua ngay do
+# Trước khi làm việc với mã của ngày đó
 
 cd e:\terraform\day-XX
 
@@ -124,7 +124,7 @@ terraform output
 terraform destroy
 ```
 
-### 8. Troubleshooting / Khac phuc su co
+### 8. Troubleshooting / Khắc Phục Sự Cố
 
 **Problem: terraform init fails**
 - Check internet connection
@@ -141,7 +141,7 @@ terraform destroy
 - Check plan output
 - Verify resources don't exist
 
-### 9. Getting Help / Nhan tro giup
+### 9. Getting Help / Nhận Trợ Giúp
 
 Each day's README includes:
 - Detailed explanations in both languages
@@ -149,7 +149,7 @@ Each day's README includes:
 - Common issues and solutions
 - Additional resources
 
-### 10. Next Steps After Course / Sau khoa hoc
+### 10. Next Steps After Course / Sau Khóa Học
 
 1. Review all 30 days
 2. Build your own project
@@ -158,7 +158,7 @@ Each day's README includes:
 5. Study advanced topics
 6. Take certification exam
 
-## File Organization / To chuc File
+## File Organization / Tổ Chức Tập Tin
 
 Each day folder contains:
 - **README.md** - Theory and objectives
@@ -166,46 +166,46 @@ Each day folder contains:
 - **terraform.tfvars** - Sample variable values
 - **lab-X.X-name/** - Lab exercises with instructions
 
-## Bilingual Content / Noi dung Song ngu
+## Bilingual Content / Nội Dung Song Ngữ
 
 All materials are in both:
-- English / Tieng Anh
-- Vietnamese / Tieng Viet
+- English / Tiếng Anh
+- Vietnamese / Tiếng Việt
 
-No emojis or icons are used / Khong su dung emoji hoac icon
+No emojis or icons are used / Không sử dụng emoji hoặc icon
 
 Comments in code explain:
-- What the code does / Code lam gi
-- Why it's written that way / Tai sao viet nhu vay
-- How to use it / Cach su dung
+- What the code does / Mã làm gì
+- Why it's written that way / Tại sao viết như vậy
+- How to use it / Cách sử dụng
 
-## Tips for Success / Meo thanh cong
+## Tips for Success / Mẹo Thành Công
 
 1. Follow the days in order
-   Lam theo thu tu cac ngay
+   Làm theo thứ tự các ngày
 
 2. Don't skip content
-   Khong bo qua noi dung
+   Không bỏ qua nội dung
 
 3. Practice all examples
-   Thuc hanh tat ca vi du
+   Thực hành tất cả ví dụ
 
 4. Take breaks
-   Nghi gap nghi gian
+   Nghỉ giữa các giờ
 
 5. Review regularly
-   On tap thuong xuyen
+   Ôn tập thường xuyên
 
 6. Experiment freely
-   Thuc nghiem tu do
+   Thử nghiệm tự do
 
 7. Keep notes
-   Giu cac ghi chu
+   Giữ các ghi chú
 
 8. Share knowledge
-   Chia se kien thuc
+   Chia sẻ kiến thức
 
-## Course Objectives Met / Dat duoc Muc tieu Khoa hoc
+## Course Objectives Met / Đạt Được Mục Tiêu Khóa Học
 
 Upon completion, you will:
 - Understand Infrastructure as Code
@@ -216,25 +216,25 @@ Upon completion, you will:
 - Prepare for real-world projects
 - Be ready for Terraform certification
 
-## Support Resources / Tai nguyen Ho tro
+## Support Resources / Tài Nguyên Hỗ Trợ
 
 - Terraform Documentation: https://www.terraform.io/docs
 - HashiCorp Learn: https://learn.hashicorp.com
 - Terraform Registry: https://registry.terraform.io
 - Community Forums: https://discuss.hashicorp.com
 
-## Final Reminder / Nhan dam Cuoi cung
+## Final Reminder / Nhắc Nhở Cuối Cùng
 
 Progress through this course at your own pace. Each day builds
 upon the previous, so don't rush. By day 30, you'll have solid
 understanding of Terraform and be ready for production use.
 
-Tien trinh qua khoa hoc nay voi toc do cua ban. Moi ngay xay
-dung tren ngay truoc, nen khong can voi vang. Den ngay 30, ban
-se co hieu biet vung chac ve Terraform va san sang su dung.
+Tiến trình qua khóa học này với tốc độ của bạn. Mỗi ngày xây
+dựng trên ngày trước, nên không cần vội vàng. Đến ngày 30, bạn
+sẽ có hiểu biết vững chắc về Terraform và sẵn sàng sử dụng.
 
 ---
 
-Happy Learning! / Hoc tap vui ve!
-Hanh trinh Terraform 30 ngay bat dau tai day.
+Happy Learning! / Học tập vui vẻ!
+Hành Trình Terraform 30 Ngày Bắt Đầu Tại Đây.
 Your Terraform 30-day journey starts here.
