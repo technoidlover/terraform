@@ -1,0 +1,53 @@
+# Day 16: AWS Project Part 1 - Foundation - Variables
+
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "project_name" {
+  description = "Project name"
+  type        = string
+  default     = "day16-project"
+}
+
+variable "environment" {
+  description = "Environment"
+  type        = string
+  default     = "development"
+
+  validation {
+    condition     = contains(["development", "staging", "production"], var.environment)
+    error_message = "Environment must be development, staging, or production."
+  }
+}
+
+variable "vpc_cidr" {
+  description = "VPC CIDR block"
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+variable "availability_zones_count" {
+  description = "Number of availability zones"
+  type        = number
+  default     = 2
+
+  validation {
+    condition     = var.availability_zones_count >= 1 && var.availability_zones_count <= 3
+    error_message = "Availability zones count must be between 1 and 3."
+  }
+}
+
+variable "enable_nat_gateway" {
+  description = "Enable NAT Gateway for private subnets"
+  type        = bool
+  default     = true
+}
+
+variable "enable_flow_logs" {
+  description = "Enable VPC Flow Logs"
+  type        = bool
+  default     = false
+}
